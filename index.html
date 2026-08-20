@@ -10,6 +10,9 @@
     <div id="wca-stats">
         <p>Соревнований: <span id="comps">загрузка...</span></p>
         <p>Сборок: <span id="solves">загрузка...</span></p>
+        <p>Медалей: <span id="medals">загрузка...</span></p>
+        <p>Страна: <span id="country">загрузка...</span></p>
+
     </div>
 
     <script>
@@ -22,6 +25,8 @@
                 // Вставляем цифры в HTML
                 document.getElementById('comps').innerText = data.competitions;
                 document.getElementById('solves').innerText = data.solves;
+                document.getElementById('medals').innerText = data.medals;
+                document.getElementById('country').innerText = data.country;
             } catch (e) {
                 console.error("Ошибка:", e);
             }

@@ -9,8 +9,9 @@ export async function onRequest(context) {
         // Выбираем только то, что реально нужно для сайта
         const stats = {
             name: data.name,
-            competitions: data.competitionCount,
-            solves: data.solveCount
+            competitions: data.numberOfCompetitions,
+            medals: data.medals,
+            country: data.country
         };
 
         // Отдаем чистый JSON на фронтенд
