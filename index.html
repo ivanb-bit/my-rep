@@ -16,7 +16,7 @@
         async function fetchMyStats() {
             try {
                 // Стучимся на наш встроенный эндпоинт
-                const res = await fetch('/api/wca');
+                const res = await fetch('/functions/api/wca');
                 const data = await res.json();
 
                 // Вставляем цифры в HTML
