@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+<link rel="icon" type="image/ico" href="public/favicon.ico" />
 <head>
     <meta charset="UTF-8">
-    <title>Мое портфолио</title>
+    <title>Ivan Berestovoi</title>
 </head>
 <body>
+
+    <img src="/public/profile_picture.jpg" alt="profile_picture">
+
     <h1>Привет, я спидкубер!</h1>
 
     <div id="wca-stats">
         <p>Я:<span id = "name">загрузка...</span></p>
         <p>Соревнований: <span id="comps">загрузка...</span></p>
-        <p>Медалей: Золотые:<span id="gold">загрузка...</span></p> <p>Медалей: Серебрянные:<span id="silver">загрузка...</span></p> <p>Медалей: Бронзовые:<span id="bronze">загрузка...</span></p>
+        <p>Медалей: <span id="medals">загрузка...</span></p>
         <p>Страна: <span id="country">загрузка...</span></p>
 
     </div>
@@ -25,9 +29,7 @@
                 // Вставляем цифры в HTML
                 document.getElementById('comps').innerText = data.competitions;
                 document.getElementById('name').innerText = data.name;
-                document.getElementById('gold').innerText = data.medals.gold;
-                document.getElementById('bronze').innerText = data.medals.bronze;
-                document.getElementById('silver').innerText = data.medals.silver;
+                document.getElementById('medals').textContent = `Золото: ${data.medals.gold}, Серебро: ${data.medals.silver}, Бронза: ${data.medals.bronze}`;
                 document.getElementById('country').innerText = data.country;
             } catch (e) {
                 console.error("Ошибка:", e);
