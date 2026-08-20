@@ -11,30 +11,33 @@
 
 .medal-table {
     width: 80%;
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 400px; /* Сделали чуть уже */
+    margin: 10px auto; /* Центрируем таблицу */
     border-collapse: collapse;
     background-color: #2a2a2a;
     color: #ffffff;
-    border-radius: 12px;       /* Вот тут задается скругление углов всей таблицы */
-    overflow: hidden;          /* Обрезает всё лишнее по углам, чтобы они были ровно скругленными */
+    border-radius: 12px;
+    overflow: hidden;
 }
 
+/* Уменьшаем padding, чтобы таблица стала короче по вертикали */
 .medal-table th, .medal-table td {
-    padding: 15px;
+    padding: 8px 10px; /* Было 15px, теперь 8px — будет компактнее */
     text-align: center;
-    border: none;              /* Убирает любые лишние обводки и линии между ячейками */
+    border: none;
 }
 
+/* Чуть увеличим отступ для самих цифр, если нужно */
+.medal-count {
+    padding-bottom: 12px; /* Чуть воздуха снизу для цифр */
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #ffaa00;
+}
 .medal-table thead th {
     border-bottom: 1px solid #444;
 }
 
-.medal-count {
-    color: #ffaa00; /* Цвет для цифр, чтобы не сливались */
-    font-weight: bold;
-    font-size: 1.2em;
-}
 
 
 /* Если у тебя где-то прописана линия под заголовком, её тут нет, так что таблица будет монолитной и чистой */
