@@ -8,3 +8,29 @@
 .center-me {
     text-align: center;
 }
+/* Стили для таблицы */
+.medal-table {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #2a2a2a; /* Чуть светлее фона body для контраста */
+    color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.medal-table th, .medal-table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.medal-table thead th {
+    border-bottom: 1px solid #444;
+}
+
+.medal-count {
+    color: #ffaa00; /* Цвет для цифр, чтобы не сливались */
+    font-weight: bold;
+    font-size: 1.2em;
+}

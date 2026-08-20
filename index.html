@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Ivan Berestovoi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
 <body>
     <h1 class="center-me"><span id = "name">загрузка...</span></h1>
@@ -14,10 +15,27 @@
 
     <div id="wca-stats">
         <p class="center-me">Соревнований: <span id="comps">загрузка...</span></p>
-        <p class="center-me">Медалей: <span id="medals">загрузка...</span></p>
         <p class="center-me">Страна: <span id="country">загрузка...</span></p>
 
     </div>
+    
+    <h3>Коллекция медалей</h3>
+    <table class="medal-table">
+        <thead>
+            <tr>
+                <th>Золото</th>
+                <th>Серебро</th>
+                <th>Бронза</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="medal-count">0</td>
+                <td class="medal-count">5</td>
+                <td class="medal-count">1</td>
+            </tr>
+        </tbody>
+    </table>
 
     <script>
         async function fetchMyStats() {
