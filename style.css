@@ -8,21 +8,22 @@
 .center-me {
     text-align: center;
 }
-/* Стили для таблицы */
+
 .medal-table {
     width: 80%;
     max-width: 500px;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #2a2a2a; /* Чуть светлее фона body для контраста */
+    background-color: #2a2a2a;
     color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 12px;       /* Вот тут задается скругление углов всей таблицы */
+    overflow: hidden;          /* Обрезает всё лишнее по углам, чтобы они были ровно скругленными */
 }
 
 .medal-table th, .medal-table td {
     padding: 15px;
     text-align: center;
+    border: none;              /* Убирает любые лишние обводки и линии между ячейками */
 }
 
 .medal-table thead th {
@@ -34,3 +35,6 @@
     font-weight: bold;
     font-size: 1.2em;
 }
+
+
+/* Если у тебя где-то прописана линия под заголовком, её тут нет, так что таблица будет монолитной и чистой */
