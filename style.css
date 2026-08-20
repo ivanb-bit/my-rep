@@ -1,7 +1,7 @@
-img{
+.my-image{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
-  width: 40%
+  margin: 0 auto;
+  width: 40%;
+  height:auto;
+  border-radius: 12px;
 }
