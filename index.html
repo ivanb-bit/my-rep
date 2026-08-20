@@ -15,7 +15,7 @@
 
     <div id="wca-stats">
         <p class="center-me">Соревнований: <span id="comps">загрузка...</span></p>
-        <p class="center-me">Страна: <span id="country">загрузка...</span></p>
+        <p class="center-me">Страна: Ukraine</p>
 
     </div>
 
@@ -48,7 +48,6 @@
                 document.getElementById('comps').innerText = data.competitions;
                 document.getElementById('name').innerText = data.name;
                 document.getElementById('medals').textContent = `Золото: ${data.medals.gold}, Серебро: ${data.medals.silver}, Бронза: ${data.medals.bronze}`;
-                document.getElementById('country').innerText = data.country;
             } catch (e) {
                 console.error("Ошибка:", e);
             }
