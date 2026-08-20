@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мое портфолио</title>
+</head>
+<body>
+    <h1>Привет, я спидкубер!</h1>
+
+    <div id="wca-stats">
+        <p>Соревнований: <span id="comps">загрузка...</span></p>
+        <p>Сборок: <span id="solves">загрузка...</span></p>
+    </div>
+
+    <script>
+        async function fetchMyStats() {
+            try {
+                // Стучимся на наш встроенный эндпоинт
+                const res = await fetch('/api/wca');
+                const data = await res.json();
+
+                // Вставляем цифры в HTML
+                document.getElementById('comps').innerText = data.competitions;
+                document.getElementById('solves').innerText = data.solves;
+            } catch (e) {
+                console.error("Ошибка:", e);
+            }
+        }
+
+        fetchMyStats();
+    </script>
+</body>
+</html>
