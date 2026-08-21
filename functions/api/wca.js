@@ -12,7 +12,7 @@ export async function onRequest(context) {
             competitions: data.numberOfCompetitions,
             gold: data.medals.gold,
             silver: data.medals.silver,
-            bronze: data.medals.bronze
+            bronze: data.medals.bronze,
             country: data.country
         };
 
