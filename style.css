@@ -14,8 +14,8 @@
     max-width: 400px; /* Сделали чуть уже */
     margin: 10px auto; /* Центрируем таблицу */
     border-collapse: collapse;
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: #d5d5d5;
+    color: #000000;
     border-radius: 12px;
     overflow: hidden;
 }
