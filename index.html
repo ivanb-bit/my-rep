@@ -30,9 +30,9 @@
         </thead>
         <tbody>
             <tr>
-                <td class="medal-count">0</td>
-                <td class="medal-count">5</td>
-                <td class="medal-count">1</td>
+                <td class="medal-count" id = "gold"></td>
+                <td class="medal-count" id = "silver"></td>
+                <td class="medal-count" id = "bronze"></td>
             </tr>
         </tbody>
     </table>
@@ -49,7 +49,9 @@
                 // Вставляем цифры в HTML
                 document.getElementById('comps').innerText = data.competitions;
                 document.getElementById('name').innerText = data.name;
-                document.getElementById('medals').textContent = `Золото: ${data.medals.gold}, Серебро: ${data.medals.silver}, Бронза: ${data.medals.bronze}`;
+                document.getElementById('gold').textContent = data.gold;
+                document.getElementById('silver').textContent = data.silver;
+                document.getElementById('bronze').textContent = data.bronze;
             } catch (e) {
                 console.error("Ошибка:", e);
             }

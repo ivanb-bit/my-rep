@@ -10,7 +10,9 @@ export async function onRequest(context) {
         const stats = {
             name: data.name,
             competitions: data.numberOfCompetitions,
-            medals: data.medals,
+            gold: data.medals.gold,
+            silver: data.medals.silver,
+            bronze: data.medals.bronze
             country: data.country
         };
 
