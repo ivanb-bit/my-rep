@@ -1,3 +1,9 @@
+html,body{
+  min-height: 100vh;
+  margin: 0;
+}
+
+
 .my-image{
   display: block;
   margin: 0 auto;
