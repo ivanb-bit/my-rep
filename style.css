@@ -73,6 +73,7 @@ html,body{
     text-decoration: none;
     font-size: 4rem;
     margin-top: 0;
+    align-self: center;
 }
 
 .nav-links {
