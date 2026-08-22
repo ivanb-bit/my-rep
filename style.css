@@ -76,7 +76,9 @@
 
 .nav-links a:hover {
     color: #ffffff !important;
-    text-decoration: none;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 
