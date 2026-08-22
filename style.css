@@ -112,16 +112,16 @@ body {
 body {
     background-color: #000102;
 }
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     /* Убираем все лишние отступы у обертки */
-    .main-content-wrapper {
+    /*.main-content-wrapper {
         margin-top: 0 !important;
         padding-top: 10px !important;
         padding-bottom: 20px !important;
     }
 
     /* Чуть поджимаем отступы между самими блоками, если они слишком большие */
-    .main-content-wrapper > * {
+    /*.main-content-wrapper > * {
         margin-bottom: 15px !important;
     }
 }
