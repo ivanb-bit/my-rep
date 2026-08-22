@@ -7,6 +7,16 @@ html,body{
   margin-left: 104px;
 }
 
+.flexim{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
 .my-image{
   display: block;
   margin: 0 auto;
@@ -14,11 +24,9 @@ html,body{
   height:auto;
   border-radius: 12px;
 }
-.center-me {
-    text-align: center;
-}
+
 .to-right {
-    text-align: right;
+    align-self: flex-start;
 }
 
 .medal-table {
