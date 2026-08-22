@@ -3,6 +3,9 @@ html,body{
   margin: 0;
 }
 
+.ltr{
+  margin-left: 104px;
+}
 
 .my-image{
   display: block;
