@@ -22,38 +22,40 @@
     </header>
 
 
+    <main class = "main-content-wrapper">
+      <div class="header-nav">
+        <a class = "to-right" href="https://github.com/ivanb-bit">MY GITHUB</a>
+      </div>
 
-    <div class="header-nav">
-      <a class = "to-right" href="https://github.com/ivanb-bit">MY GITHUB</a>
-    </div>
+      <h1 class="center-me"><span id = "name">загрузка...</span></h1>
 
-    <h1 class="center-me"><span id = "name">загрузка...</span></h1>
+      <img src="/public/profile_picture.jpg" class = "my-image" alt="profile_picture">
 
-    <img src="/public/profile_picture.jpg" class = "my-image" alt="profile_picture">
+      <div id="wca-stats">
+          <h3 class="center-me">Соревнований: <span id="comps">загрузка...</span></h3>
+          <h3 class="center-me">Страна: Ukraine</h3>
 
-    <div id="wca-stats">
-        <h3 class="center-me">Соревнований: <span id="comps">загрузка...</span></h3>
-        <h3 class="center-me">Страна: Ukraine</h3>
+      </div>
 
-    </div>
+      <h3 class="center-me">Коллекция медалей</h3>
+      <table class="medal-table">
+          <thead>
+              <tr>
+                  <th>Золото</th>
+                  <th>Серебро</th>
+                  <th>Бронза</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="medal-count" id = "gold"></td>
+                  <td class="medal-count" id = "silver"></td>
+                  <td class="medal-count" id = "bronze"></td>
+              </tr>
+          </tbody>
+      </table>
+    </main>
 
-    <h3 class="center-me">Коллекция медалей</h3>
-    <table class="medal-table">
-        <thead>
-            <tr>
-                <th>Золото</th>
-                <th>Серебро</th>
-                <th>Бронза</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="medal-count" id = "gold"></td>
-                <td class="medal-count" id = "silver"></td>
-                <td class="medal-count" id = "bronze"></td>
-            </tr>
-        </tbody>
-    </table>
 
 
     <script>

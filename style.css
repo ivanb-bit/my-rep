@@ -112,21 +112,14 @@ body {
 body {
     background-color: #000102;
 }
-@media (max-width: 768px) {
-    /* Увеличиваем аватарку */
-    .profile-container img,
-    img {
-        width: 85% !important; /* Делаем шире */
-        max-width: 320px;     /* Чтобы не растянуло в космос */
-    }
-
-    /* Раздвигаем тексты и делаем их крупнее */
-    .content, body {
-        font-size: 1.3rem !important;
-    }
-
-    /* Можно точечно подкрутить заголовки и цифры */
-    h2, h3, .stats {
-        font-size: 1.5rem !important;
-    }
+/* Базовый стиль для обертки */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Центрирует всё по вертикали */
+    min-height: calc(100vh - 80px); /* Высота экрана минус высота хедера */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 20px; /* Внутренние отступы */
 }
