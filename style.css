@@ -29,14 +29,15 @@
     left: 0;
     width: 100%;
 
-    /* Сохраняем стиль стекла, но без закруглений и отступов по бокам */
     background: rgba(26, 26, 26, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0;
-    padding: 14px 24px;
+
+    /* Сделали шапку тоньше */
+    padding: 8px 24px;
     z-index: 1000;
 }
 
@@ -44,8 +45,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* Чтобы контент не прилипал к самым краям экрана монитора */
-    margin: 0 auto; /* Центрируем содержимое внутри хедера */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -69,6 +70,11 @@
 
 .nav-links a:hover {
     color: #ffffff;
+}
+
+/* Добавь это для основного блока с контентом (или твоего контейнера с именем), чтобы он сдвинулся ниже шапки */
+body {
+    padding-top: 60px;
 }
 .medal-table th, .medal-table td {
     padding: 8px 10px;
