@@ -24,9 +24,11 @@ html,body{
   height:auto;
   border-radius: 12px;
 }
-
-.to-right {
-    align-self: flex-start;
+.center-me {
+    text-align: center;
+}
+.leftik{
+    text-align: left;
 }
 
 .medal-table {
