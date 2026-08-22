@@ -49,16 +49,18 @@
 }
 
 .logo {
-    color: #ffffff;
-    font-weight: 700;
+    color: #ffffff !important;
+    font-weight: 1400;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 2rem;
 }
 
 .nav-links {
     display: flex;
     gap: 20px;
 }
+
+
 
 .nav-links a {
     color: #b0b0b0;
@@ -70,6 +72,7 @@
 .nav-links a:hover {
     color: #ffffff;
 }
+
 
 /* Добавь это для основного блока с контентом (или твоего контейнера с именем), чтобы он сдвинулся ниже шапки */
 body {
