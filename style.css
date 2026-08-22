@@ -8,6 +8,9 @@
 .center-me {
     text-align: center;
 }
+.to-right {
+    text-align: right;
+}
 
 .medal-table {
     width: 80%;
