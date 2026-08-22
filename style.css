@@ -64,7 +64,7 @@
 
 
 .nav-links a {
-    color: #b0b0b0;
+    color: #b0b0b0 !important;
     text-decoration: none;
     font-size: 1.5rem;
     transition: color 0.2s ease;
@@ -75,7 +75,8 @@
 }
 
 .nav-links a:hover {
-    color: #ffffff;
+    color: #ffffff !important;
+    text-decoration: none;
 }
 
 
