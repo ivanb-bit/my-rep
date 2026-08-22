@@ -112,20 +112,21 @@ body {
 body {
     background-color: #000102;
 }
-/* Срабатывает на экранах шире/уже, в данном случае — на телефонах до 768px */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column; /* Ставим элементы друг под друга */
-        align-items: center;    /* Центрируем всё по серединке */
-        gap: 15px;              /* Отступ между логотипом и меню */
+    /* Увеличиваем аватарку */
+    .profile-container img,
+    img {
+        width: 85% !important; /* Делаем шире */
+        max-width: 320px;     /* Чтобы не растянуло в космос */
     }
 
-    .logo {
-        font-size: 2.5rem !important; /* Уменьшаем гигантский логотип под мобилки */
-        margin-top: 0 !important;     /* Убираем отрицательный отступ */
+    /* Раздвигаем тексты и делаем их крупнее */
+    .content, body {
+        font-size: 1.3rem !important;
     }
 
-    .nav-links {
-        gap: 15px; /* Чуть сжимаем расстояние между ссылками в меню */
+    /* Можно точечно подкрутить заголовки и цифры */
+    h2, h3, .stats {
+        font-size: 1.5rem !important;
     }
 }
