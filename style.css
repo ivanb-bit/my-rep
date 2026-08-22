@@ -103,7 +103,7 @@ html,body{
 
 /* Добавь это для основного блока с контентом (или твоего контейнера с именем), чтобы он сдвинулся ниже шапки */
 body {
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 .medal-table th, .medal-table td {
