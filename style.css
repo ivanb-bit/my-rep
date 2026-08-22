@@ -23,30 +23,20 @@
     overflow: hidden;
 }
 
-.header-nav {
-
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
 .glass-header {
     position: fixed;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 800px;
+    top: 0;
+    left: 0;
+    width: 100%;
 
-    /* Магия стекла */
-    background: rgba(26, 26, 26, 0.75);
+    /* Сохраняем стиль стекла, но без закруглений и отступов по бокам */
+    background: rgba(26, 26, 26, 0.85);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Для сафари */
+    -webkit-backdrop-filter: blur(12px);
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 12px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    padding: 14px 24px;
     z-index: 1000;
 }
 
@@ -54,6 +44,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px; /* Чтобы контент не прилипал к самым краям экрана монитора */
+    margin: 0 auto; /* Центрируем содержимое внутри хедера */
 }
 
 .logo {
@@ -78,7 +70,6 @@
 .nav-links a:hover {
     color: #ffffff;
 }
-
 .medal-table th, .medal-table td {
     padding: 8px 10px;
     text-align: center;
