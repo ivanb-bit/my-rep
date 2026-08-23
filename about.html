@@ -37,24 +37,7 @@
   </div>
 
     <script>
-        async function fetchMyStats() {
-            try {
-                // Стучимся на наш встроенный эндпоинт
-                const res = await fetch('/api/wca');
-                const data = await res.json();
-
-                // Вставляем цифры в HTML
-                document.getElementById('comps').innerText = data.competitions;
-                document.getElementById('name').innerText = data.name;
-                document.getElementById('gold').textContent = data.gold;
-                document.getElementById('silver').textContent = data.silver;
-                document.getElementById('bronze').textContent = data.bronze;
-            } catch (e) {
-                console.error("Ошибка:", e);
-            }
-        }
-
-        fetchMyStats();
+    
     </script>
 </body>
 </html>
