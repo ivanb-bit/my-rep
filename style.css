@@ -37,7 +37,7 @@ html,body{
     text-align: left;
 }
 
-.medal-table {
+.tables {
     width: 80%;
     max-width: 400px;
     margin: 10px auto;
@@ -47,6 +47,7 @@ html,body{
     border-radius: 12px;
     overflow: hidden;
 }
+
 
 .glass-header {
     position: fixed;
@@ -113,19 +114,19 @@ html,body{
     padding-top: 90px;
 }
 
-.medal-table th, .medal-table td {
+.tables th, .tables td {
     padding: 8px 10px;
     text-align: center;
     border: none;
 }
 
-.medal-count {
+.some-count {
     padding-bottom: 12px;
     font-weight: bold;
     font-size: 1.3em;
     color: #ffaa00;
 }
-.medal-table thead th {
+.tables thead th {
     border-bottom: 1px solid #444;
 }
 

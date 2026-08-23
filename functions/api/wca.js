@@ -5,7 +5,8 @@ export async function onRequest(context) {
     try {
         const response = await fetch(wcaUrl);
         const data = await response.json();
-
+        const clockSingle = data.rank.singles.find(item => item.eventId === "clock");
+        const clockAverage = data.rank.averages.find(item => item.eventId === "clock");
         // Выбираем только то, что реально нужно для сайта
         const stats = {
             name: data.name,
@@ -13,7 +14,9 @@ export async function onRequest(context) {
             gold: data.medals.gold,
             silver: data.medals.silver,
             bronze: data.medals.bronze,
-            country: data.country
+            country: data.country,
+            single: clockSingle ? clockSingle.best : null,
+            average: clockAverage ? clockAverage.best : null
         };
 
         // Отдаем чистый JSON на фронтенд

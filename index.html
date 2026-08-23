@@ -28,30 +28,45 @@
         <a class = "to-right" href="https://github.com/ivanb-bit">MY GITHUB</a>
       </div>-->
 
-      <h1 class="center-me"><span id = "name">загрузка...</span></h1>
+      <h1 class="center-me"><span id = "name">loading...</span></h1>
 
       <img src="/public/profile_picture.jpg" class = "my-image" alt="profile_picture">
 
       <div id="wca-stats">
-          <h3 class="center-me">Соревнований: <span id="comps">загрузка...</span></h3>
-          <h3 class="center-me">Страна: Ukraine</h3>
+          <h3 class="center-me">Competitions: <span id="comps">loading...</span></h3>
+          <h3 class="center-me">Country: Ukraine</h3>
 
       </div>
 
-      <h3 class="center-me">Коллекция медалей</h3>
-      <table class="medal-table">
+      <h3 class="center-me">Medal collection</h3>
+      <table class="tables">
           <thead>
               <tr>
-                  <th>Золото</th>
-                  <th>Серебро</th>
-                  <th>Бронза</th>
+                  <th>Gold</th>
+                  <th>Silver</th>
+                  <th>Bronze</th>
               </tr>
           </thead>
           <tbody>
               <tr>
-                  <td class="medal-count" id = "gold"></td>
-                  <td class="medal-count" id = "silver"></td>
-                  <td class="medal-count" id = "bronze"></td>
+                  <td class="some-count" id = "gold"></td>
+                  <td class="some-count" id = "silver"></td>
+                  <td class="some-count" id = "bronze"></td>
+              </tr>
+          </tbody>
+      </table>
+      <table class="tables">
+          <thead>
+              <tr>
+                  <th>Single</th>
+                  <th>Average</th>
+
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="some-count" id = "single"></td>
+                  <td class="some-count" id = "average"></td>
               </tr>
           </tbody>
       </table>
@@ -76,6 +91,9 @@
                 document.getElementById('gold').textContent = data.gold;
                 document.getElementById('silver').textContent = data.silver;
                 document.getElementById('bronze').textContent = data.bronze;
+                document.getElementById('single').textContent = data.single;
+                document.getElementById('average').textContent = data.average;
+
             } catch (e) {
                 console.error("Ошибка:", e);
             }
