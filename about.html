@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="icon" type="image/ico" href="public/favicon.ico" />
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <meta charset="UTF-8">
+    <title>Ivan Berestovoi</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <header class="glass-header">
+        <div class="header-content">
+            <a href="#" class="logo">Vanch1k</a>
+            <nav class="nav-links">
+                <a href="#">About me</a>
+                <a href="CDC.html">Clock Death Countdown (CDC)</a>
+                <a href="https://github.com/ivanb-bit" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="flexim">
+
+      <!--<div class="header-nav">
+        <a class = "to-right" href="https://github.com/ivanb-bit">MY GITHUB</a>
+      </div>-->
+
+      <h1 class="center-me"><span id = "name">загрузка...</span></h1>
+
+      <img src="/public/profile_picture.jpg" class = "my-image" alt="profile_picture">
+
+      <div id="wca-stats">
+          <h3 class="center-me">Соревнований: <span id="comps">загрузка...</span></h3>
+          <h3 class="center-me">Страна: Ukraine</h3>
+
+      </div>
+
+      <h3 class="center-me">Коллекция медалей</h3>
+      <table class="medal-table">
+          <thead>
+              <tr>
+                  <th>Золото</th>
+                  <th>Серебро</th>
+                  <th>Бронза</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="medal-count" id = "gold"></td>
+                  <td class="medal-count" id = "silver"></td>
+                  <td class="medal-count" id = "bronze"></td>
+              </tr>
+          </tbody>
+      </table>
+
+
+    <h3 class="center-me">Competitive Ukrainian cuber<br>6 podiums in Clock</h3>
+    <h3 class="center-me">Not a coach but speedcubing enjoyer</h3>
+    <h2 class="center-me">Bad news: WCA getting rid of my main discipline<br><br>The countdown to Clock's death is right <a href="CDC">here</a></h2>
+    <h4 class = 'leftik'>Website was written by <a href = "mailto:ivancoder@proton.me">Ivan Berestovoi</a></h4>
+  </div>
+
+    <script>
+        async function fetchMyStats() {
+            try {
+                // Стучимся на наш встроенный эндпоинт
+                const res = await fetch('/api/wca');
+                const data = await res.json();
+
+                // Вставляем цифры в HTML
+                document.getElementById('comps').innerText = data.competitions;
+                document.getElementById('name').innerText = data.name;
+                document.getElementById('gold').textContent = data.gold;
+                document.getElementById('silver').textContent = data.silver;
+                document.getElementById('bronze').textContent = data.bronze;
+            } catch (e) {
+                console.error("Ошибка:", e);
+            }
+        }
+
+        fetchMyStats();
+    </script>
+</body>
+</html>
