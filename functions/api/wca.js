@@ -15,8 +15,8 @@ export async function onRequest(context) {
             silver: data.medals.silver,
             bronze: data.medals.bronze,
             country: data.country,
-            single: clockSingle ? clockSingle.best : null,
-            average: clockAverage ? clockAverage.best : null
+            single: clockSingle ? (clockSingle.best / 100).toFixed(2) : null,
+            average: clockAverage ? (clockAverage.best / 100).toFixed(2) : null
         };
 
         // Отдаем чистый JSON на фронтенд
