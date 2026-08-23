@@ -17,6 +17,12 @@ html,body{
   box-sizing: border-box;
 }
 
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .my-image{
   display: block;
   margin: 0 auto;
