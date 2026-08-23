@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="icon" type="image/ico" href="public/favicon.ico" />
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <meta charset="UTF-8">
+    <title>Ivan Berestovoi</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+      <header class="glass-header">
+        <div class="header-content">
+            <a href="#" class="logo">Vanch1k</a>
+            <nav class="nav-links">
+                <a href="#">About me</a>
+                <a href="#">Clock Death Countdown (CDC)</a>
+                <a href="https://github.com/ivanb-bit" target="_blank">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="flexim">
+
+      <!--<div class="header-nav">
+        <a class = "to-right" href="https://github.com/ivanb-bit">MY GITHUB</a>
+      </div>-->
+
+      <div id="countdown" class="timer">
+    <span class = "center-me" id="days">0</span> дн.
+    <span class = "center-me" id="hours">0</span> ч.
+    <span class = "center-me" id="minutes">0</span> мин.
+    <span class = "center-me" id="seconds">0</span> сек.
+    </div>
+    <script>
+    // Укажи свою целевую дату (например, конец 2026 года)
+    const targetDate = new Date("December 31, 2026 23:59:59").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+
+        if (timeLeft < 0) {
+            document.getElementById("countdown").innerHTML = "Время вышло!";
+            return;
+        }
+
+        // Считаем дни, часы, минуты и секунды
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Выводим цифры в HTML
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+    }
+
+    // Запускаем сразу при загрузке и обновляем каждую секунду
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
