@@ -3,9 +3,9 @@ html,body{
   margin: 0;
 }
 
-.ltr{
+/*.ltr{
   margin-left: 104px;
-}
+}*/
 
 .flexim{
   display: flex;
@@ -103,8 +103,7 @@ html,body{
 }
 
 
-/* Добавь это для основного блока с контентом (или твоего контейнера с именем), чтобы он сдвинулся ниже шапки */
-body {
+div {
     padding-top: 90px;
 }
 
